@@ -13,7 +13,7 @@ jobs:
     env:
       # one filename per line, including directory if in a subdirectory
       FILES: |
-        \F4D1-Analysis-and-Geometry-on-Manifolds\Analysis_on_Manifolds_Notes.tex
+        Bonn-Winter-24/25\F4D1-Analysis-and-Geometry-on-Manifolds\Analysis_on_Manifolds_Notes.tex
     steps:
       - name: Checkout
         uses: actions/checkout@v4
