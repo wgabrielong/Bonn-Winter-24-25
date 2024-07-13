@@ -13,7 +13,6 @@
 .*.lb
 .*.bbl-SAVE-ERROR
 .*.bcf-SAVE-ERROR
-F4D1-Analysis-and-Geometry-on-Manifolds/Analysis_on_Manifolds_Notes.pdf
 
 
 
@@ -305,3 +304,5 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 *.bbl-SAVE-ERROR
+F4D1-Analysis-and-Geometry-on-Manifolds/Analysis_on_Manifolds_Notes.pdf
+F4D1-Analysis-and-Geometry-on-Manifolds/Analysis_on_Manifolds_Notes.pdf
