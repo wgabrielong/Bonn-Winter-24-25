@@ -1,5 +1,5 @@
 \documentclass{amsart}
-\usepackage[margin=1.1in]{geometry} 
+\usepackage[margin=1.5in]{geometry} 
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{amssymb}
@@ -20,7 +20,7 @@
   {\end{proof}}
 \renewcommand\qedsymbol{$\blacksquare$}
 
-\usepackage{amsmath, amssymb, tikz, amsthm, csquotes, multicol, footnote, tablefootnote, biblatex, wrapfig, float, quiver, mathrsfs, cleveref, enumitem, upgreek,stmaryrd}
+\usepackage{amsmath, amssymb, tikz, amsthm, csquotes, multicol, footnote, tablefootnote, biblatex, wrapfig, float, quiver, mathrsfs, cleveref, enumitem, upgreek, stmaryrd, marginnote}
 \addbibresource{refs.bib}
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -31,7 +31,7 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem*{remark}{Remark}
+\newtheorem{remark}[theorem]{Remark}
 \newtheorem{definition}[theorem]{Definition}
 \numberwithin{equation}{section}
 \begin{document}
