@@ -1,5 +1,5 @@
 \documentclass{amsart}
-\usepackage[margin=1.1in]{geometry} 
+\usepackage[margin=1.5in]{geometry} 
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{amssymb}
@@ -20,7 +20,7 @@
   {\end{proof}}
 \renewcommand\qedsymbol{$\blacksquare$}
 
-\usepackage{amsmath, amssymb, tikz, amsthm, csquotes, multicol, footnote, tablefootnote, biblatex, wrapfig, float, quiver, mathrsfs, cleveref, enumitem, upgreek,stmaryrd}
+\usepackage{amsmath, amssymb, tikz, amsthm, csquotes, multicol, footnote, tablefootnote, biblatex, wrapfig, float, quiver, mathrsfs, cleveref, enumitem, upgreek, stmaryrd, marginnote, todonotes}
 \addbibresource{refs.bib}
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -31,12 +31,13 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem*{remark}{Remark}
+\newtheorem{remark}[theorem]{Remark}
 \newtheorem{definition}[theorem]{Definition}
 \numberwithin{equation}{section}
+\setuptodonotes{color=blue!20, size=tiny}
 \begin{document}
 \large
-\title[Habiro Rings]{V5A2 -- The Habiro Ring of a Number Field \\ Winter Semester 2024/25}
+\title[Habiro Rings -- Bonn, Winter 2024/25]{V5A2 -- The Habiro Ring of a Number Field \\ Winter Semester 2024/25}
 \author{Wern Juin Gabriel Ong}
 \address{Universit\"{a}t Bonn, Bonn, D-53113}
 \email{wgabrielong@uni-bonn.de}
