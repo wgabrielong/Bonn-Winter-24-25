@@ -95,6 +95,15 @@ The countability property is preserved under the following conditions.
         \item If $X$ is locally Euclidean and $\{K_{i}\}_{i=1}^{\infty}$ is a sequence of compact subsets such that $X=\bigcup_{i=1}^{\infty}K_{i}$ then $X$ is second countable. 
     \end{enumerate}
 \end{proposition}
+\begin{proof}[Proof of (i)]
+    For $Y\subseteq X$ a subspace with the induced topology, we seek to produce a countable basis for $Y$. Let $\mathcal{B}$ be a countable basis for $X$ and $\mathcal{B}'=\{\overline{V}=V\cap Y| V\in\mathcal{B}\}$ which is countable since it is cardinality is at most that of $\mathcal{B}$ which is countable by hypothesis. We show $\mathcal{B}'$ is a basis for $Y$.  Let $\overline{U}\subseteq Y$ be open so $\overline{U}=U\cap Y$ for some $U\subseteq X$ open by definition of the subspace topology. Let $y\in\overline{V}$ and note that since $\mathcal{B}$ is a basis for $X$, there is a set $V$ of $\mathcal{B}$ contained in $U$ with $y\in V$ giving a set $V\cap Y=\overline{V}\in\mathcal{B}'$ that is contained in $\overline{U}$ hence producing a basis for $Y$. 
+  \end{proof}
+  \begin{proof}[Proof of (ii)]
+    Let $\{U_{i}\}_{i\in I}$ be a countable open cover of $X$ and for some fixed $i\in I$ consider $\{U_{ij}\}_{j\in J_{i}}$ a countable basis for $U_{i}$. Note that $\{U_{ij}\}_{i\in I, j\in J_{i}}$ is countable, a countable union of countable sets which we seek to show is a basis for $X$. We show that any open $V\subseteq X$ can be written as a union of some $U_{ij}$'s. Since the $U_{i}$'s are open in $X$, we can set $V_{i}=U_{i}\cap V$ which are open in $U_{i}$. As we have shown in class, $V_{i}$ can be written as a union $V_{i}=\bigcup_{j\in J_{i}'}U_{ij}$ for fixed $i$ and $J_{i}'\subseteq J_{i}$ and we have $V=\bigcup_{i\in I, j\in J_{i}'}U_{ij}$ expressing an open of $X$ as a union of elements of $\{U_{ij}\}_{i\in I, j\in J_{i}}$ making $\{U_{ij}\}_{i\in I, j\in J_{i}}$ basis of $X$ which we have shown to be countable above. 
+  \end{proof}
+  \begin{proof}[Proof of (iii)]
+    For each $K_{i}$ consider an open cover of $K_{i}$ by open sets $\{U_{ij}\}_{j\in J_{i}}$ hoemeomorphic to $\RR^{n}$ which exist by $X$ being locally Euclidean. Without loss of generality, we can consider this cover to be finite taking $\{U_{ij}\}_{j=1}^{m}$ since $K_{i}$ is compact. Each $U_{ij}$ has basis given by preimages of the countable basis of open balls in $\RR^{n}$ by taking balls of rational radius centered at rational points endowing each $U_{ij}$ with a countable basis. Thus each $K_{i}$ has a countable basis by taking finite unions over the countable bases of $U_{ij}$ for $j\in J_{i}$ and $X$ has countable basis by taking countable union over the countable bases of each $K_{i}$ as desired. 
+  \end{proof}
 \begin{remark}
     The property of being second countable is not preserved under arbitrary quotients, though this holds when the quotient map is open. 
 \end{remark}
@@ -110,7 +119,7 @@ We also introduce the following notion of compact exhaustability.
     Let $X$ be a topological space. $X$ is compactly exhaustible if there exists a sequence of compact subsets $\{K_{i}\}_{i=1}^{\infty}$ of $X$ such that $K_{i}\subseteq K_{i+1}^{\circ}$ and $X=\bigcup_{i=1}^{\infty}K_{i}$.
 \end{definition}
 The condition of compact exhaustability is satisfied under relatively mild hypotheses. 
-\begin{proposition}\label{prop: locally euclidean, Hausdorff, second countable implies compactly exhaustible}
+\begin{proposition}\label{prop: locally euclidean Hausdorff second countable implies compactly exhaustible}
     Let $X$ be a topological space. If $X$ is locally Euclidean, Hausdorff, and second countable, $X$ admits an exhaustion by compact subsets. 
 \end{proposition}
 \begin{proof}
