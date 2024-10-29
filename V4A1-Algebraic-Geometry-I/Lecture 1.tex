@@ -58,15 +58,15 @@ We can now consider the following construction.
 \begin{proposition}\label{prop: structure presheaf on spec A}
     Let $A$ be a ring. Consider the association
     \begin{equation}\label{eqn: structure presheaf on spec A}
-        U\mapsto \left\{s:U\to\coprod_{\pfrak\in U}A_{\pfrak}:\substack{\forall\pfrak\in U, s(\pfrak)\in A_{\pfrak} \text{ and } \\ \exists V\subseteq X, p\in V\subseteq U, \exists a,b\in A \text{ s.t. }b\notin\qfrak \forall\qfrak\in V, s(\qfrak)=\frac{a}{b}\in A_{\qfrak}}\right\}
+        U\mapsto \left\{s:U\to\coprod_{\pfrak\in U}A_{\pfrak}:\substack{\forall\pfrak\in U, s(\pfrak)\in A_{\pfrak} \text{ and } \\ \exists U'\subseteq X, p\in U'\subseteq U, \exists a,b\in A \text{ s.t. }b\notin\qfrak \forall\qfrak\in U', s(\qfrak)=\frac{a}{b}\in A_{\qfrak}}\right\}
     \end{equation}
     and for $V\subseteq U\subseteq X$ the forgetful maps. This association defines a presheaf of rings on $\spec(A)$.\marginpar{This defines a presheaf in terms of compatible stalks following \cite[\S 2.2]{Hartshorne}, which to me seems more artificial than in terms of localizations as in \cite[\S 4.1]{Vakil}}
 \end{proposition}
 \begin{proof}
     The category of rings is bicomplete, in particular admitting colimits and thus coproducts giving the sets of (\ref{eqn: structure presheaf on spec A}) the structure of a ring by pointwise operations. We get forgetful maps 
     \begin{align*}
-        &\left\{s:U\to\coprod_{\pfrak\in U}A_{\pfrak}:\substack{\forall\pfrak\in U, s(\pfrak)\in A_{\pfrak} \text{ and } \\ \exists V\subseteq X, p\in V\subseteq U, \exists a,b\in A \text{ s.t. }b\notin\qfrak \forall\qfrak\in V, s(\qfrak)=\frac{a}{b}\in A_{\qfrak}}\right\} \\
-        &\hspace{0.5cm}\to\left\{s|_{U'}:U'\to\coprod_{\pfrak\in U'}A_{\pfrak}:\substack{\forall\pfrak\in U', s(\pfrak)\in A_{\pfrak} \text{ and } \\ \exists V\subseteq X, p\in V\subseteq U', \exists a,b\in A \text{ s.t. }b\notin\qfrak \forall\qfrak\in V, s(\qfrak)=\frac{a}{b}\in A_{\qfrak}}\right\}
+        &\left\{s:U\to\coprod_{\pfrak\in U}A_{\pfrak}:\substack{\forall\pfrak\in U, s(\pfrak)\in A_{\pfrak} \text{ and } \\ \exists V\subseteq X, p\in U'\subseteq U, \exists a,b\in A \text{ s.t. }b\notin\qfrak \forall\qfrak\in U', s(\qfrak)=\frac{a}{b}\in A_{\qfrak}}\right\} \\
+        &\hspace{0.5cm}\to\left\{s|_{V}:V\to\coprod_{\pfrak\in V}A_{\pfrak}:\substack{\forall\pfrak\in U', s(\pfrak)\in A_{\pfrak} \text{ and } \\ \exists U'\subseteq X, p\in U'\subseteq U, \exists a,b\in A \text{ s.t. }b\notin\qfrak \forall\qfrak\in U', s(\qfrak)=\frac{a}{b}\in A_{\qfrak}}\right\}
     \end{align*}
     for $U'\subseteq U$ that satisfy the commutativity of the diagram (\ref{diag: presheaf triangle}) and hence defines a presheaf. 
 \end{proof}
