@@ -36,7 +36,7 @@ This function allows us to construct smooth functions that take prescribed value
     The function $g(t)=\frac{f(r_{2}-t)}{f(r_{2}-t)+f(t-r_{1})}$ suffices since the denominator is nonvanishing as both summands are bounded below and one of them is strictly positive for all $t\in\RR$. 
 \end{proof}
 This phenomena has a natural generalization as cutoff functions. 
-\begin{definition}\label{def: cutoff functions}
+\begin{definition}[Cutoff Function]\label{def: cutoff functions}
     Let $0<r_{1}<r_{2}$. A cutoff function is a function $H:\RR^{n}\to\RR$ with the following properties:
     \begin{itemize}
         \item $H=1$ on $\overline{B_{r_{1}}}$. 
@@ -73,6 +73,6 @@ Partitions of unity are defined as follows.
     \end{itemize}
 \end{definition}
 These partitions of unity exist for any smooth manifold. 
-\begin{theorem}
+\begin{theorem}\label{thm: existence of partitions of unity}
     Let $M$ be a smooth manifold and $\{U_{\alpha}\}_{\alpha\in\Acal}$ an open cover of $M$. There exists a partition of unity subordinate to the cover $\{U_{\alpha}\}_{\alpha\in\Acal}$.
 \end{theorem}
