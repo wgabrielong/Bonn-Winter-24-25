@@ -46,7 +46,7 @@ Similarly in the case of adapted $q$-deformations, we have the following.
 \begin{remark}
     The above are examples of Nahm sums of \Cref{def: Nahm sum} for the case $N=1$ and $A=0$. 
 \end{remark}
-In the adapted variant, we can alternatively describe $f(t)$ as follows. 
+In the adapted variant, $f(t)$ can be described similarly.  
 \begin{proposition}\label{prop: Pochhammer as exponential}
     The $q$-difference equation with $\nabla_{q}'f(t)=f(t)$ with initial value $f(0)=1$ has solution $f(t)=(t;q)_{\infty}^{-1}$.
 \end{proposition}
@@ -56,7 +56,7 @@ In the adapted variant, we can alternatively describe $f(t)$ as follows.
         f(t) = (1-t)f(qt)
     \end{equation} Applying the same manipulation to $f(qt)=\frac{f(qt)-f(q^{2}t)}{qt}$ we have $f(qt)=(1-qt)f(q^{2}t)$ which by induction and substituting into (\ref{eqn: q Pochhammer expansion of exponential}) we get $f(t)=(t;q)_{\infty}^{-1}$, yielding the claim. 
 \end{proof}
-As an immediate corollary, we deduce the following. 
+This gives an expression for $(t;q)_{\infty}^{-1}$. 
 \begin{corollary}
     There is an equality
     $$(t;q)_{\infty}^{-1}=\sum_{n\geq0}\frac{t^{n}}{(q;q)_{n}}$$
@@ -141,7 +141,7 @@ Elements of in the ring $t\cdot\ZZ[t,\frac{1}{1-t}]$ behave especially nicely wi
     However, for any fixed $N$, the coefficient of $x^{N}$ is a polynomial combination of terms $\frac{c_{n}(t)^{k}}{k!}$ where $n\leq N, k\leq N$ of which there are only finitely many, in particular given by some restriction of $\prod_{0\leq n\leq N}\sum_{0\leq k\leq N}\frac{c_{n}(t)^{k}}{k!}$ which lies in $\mathrm{Frac}(A)[t,\frac{1}{1-t}]$ since each term does. 
 \end{proof}
 
-With this language in hand, we deduce the following asymptotic result about the Pochhammer symbol $(t;q)_{\infty}$. 
+With this language in hand, we deduce an asymptotic result about the Pochhammer symbol $(t;q)_{\infty}$. 
 \begin{proposition}\label{prop: asymptotics q t Pochhammer at 1}
     The $q$-Pochhammer symbol $(t;q)_{\infty}$ satisfies the asymptotic formula
     \begin{equation}\label{eqn: asymptotics of q t Pochhammer at 1}
@@ -219,7 +219,7 @@ We state some elementary properties of Bernoulli polynomials.
     as desired. 
 \end{proof}
 
-The first few Bernoulli polynomials are given as follows \cite{BernoulliPolynomial}. 
+We list the first few Bernoulli polynomials \cite{BernoulliPolynomial}. 
 \begin{table}[h]\label{table: Bernoulli polynomials}
     \begin{align*}
         B_{0}(t)&=1 && B_{1}(t)=t-\frac{1}{2} \\
@@ -259,7 +259,7 @@ We now treat the asymptotics at other roots of unity, taking $q=\zeta_{m}\exp(h)
     \end{align*}
     giving an expression of the power series in terms of $h$. 
 \end{proof}
-We will require the following statements in what follows. 
+We will require the following statements in the subsequent discussion 
 \begin{lemma}\label{lem: dilogarithm roots of unity sum}
     The dilogarithm satisfies the identity 
     \begin{equation}\label{eqn: dilogarithm roots of unity sum}
@@ -281,7 +281,7 @@ We will require the following statements in what follows.
     the summands above vanish if $\ell$ is not a multiple of $m$ so the sum is in fact given by the sum over $m$-multiples
     $$\sum_{\ell\geq1}\frac{mt^{m\ell}}{(m\ell)^{n}}=\frac{1}{m^{n-1}}\sum_{\ell\geq1}\frac{t^{m\ell}}{\ell^{n}}=\frac{1}{m^{n-1}}\cdot\Li_{n}(t^{m}).$$
 \end{proof}
-We recover the behavior $q\to\zeta_{m}$ as $h\to0$ so applying the expansion of \Cref{lem: summand expansion at roots of unity} to \Cref{prop: logarithm at worst simple poles at roots of unity}, we get the following asymptotic result. 
+We recover the behavior $q\to\zeta_{m}$ as $h\to0$ so applying the expansion of \Cref{lem: summand expansion at roots of unity} to \Cref{prop: logarithm at worst simple poles at roots of unity}, we get an asymptotic result as above. 
 \begin{proposition}\label{prop: asymptotics of q t Pochhammer at root of unity}
     The $q$-Pochhammer symbol $(t;q)_{\infty}$ satisfies the asymptotic formula
     \begin{equation}\label{eqn: asymptotics of q t Pochhammer at root of unity}
@@ -313,5 +313,5 @@ We recover the behavior $q\to\zeta_{m}$ as $h\to0$ so applying the expansion of 
     respectively. Exponentiating, we get, up to constants, 
     $$\exp\left(\frac{\Li_{2}(t^{m})}{m^{2}h}\right)\cdot\frac{\sqrt{1-t^{m}}}{\prod_{i=0}^{m-1}\cdot\left(1-\zeta_{m}t\right)^{i/m}}\cdot O(h).$$
 \end{proof}
-Qualitatively, this is quite similar to the asymptotic expansion gleaned in (\ref{eqn: asymptotics of q t Pochhammer at 1}) albeit with a more complicated factor of $O(h)$. In more general settings, the factor of $O(h)$ is the \'{e}tale regulator maps $K$-theory and becomes increasingly difficult to understand. 
+Qualitatively, this is quite similar to the asymptotic expansion gleaned in (\ref{eqn: asymptotics of q t Pochhammer at 1}) albeit with a more complicated factor of $O(h)$. In more general settings, the factor of $O(h)$ is the \'{e}tale regulator maps on algebraic $K$-theory and becomes increasingly difficult to understand. 
 % The expansion property of n\geq 2 terms should be able to be gleaned using the different approach outlined by grouping the Pochhammer symbol by residue classes modulo m. If q= \zeta_{m}\exp(h) so q^m is close to 1 and know the asymptotics of (q^i t; q^m)_{\infty}. 
