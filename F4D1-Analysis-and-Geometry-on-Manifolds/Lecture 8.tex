@@ -34,7 +34,7 @@ To define immersions, we require the following lemma.
     Fix some full rank matrix $A\in\mathrm{Mat}_{m\times n}(\RR)$. Up to transposition, it suffices to consider the case $m\leq n$. Now note that if $A$ is of full rank, there is an invertible submatrix $A'$ of $A$ obtained by deleting $m-n$ columns from $A$. Consider the map $\mathrm{Mat}_{m\times n}(\RR)\to\mathrm{Mat}_{m\times m}(\RR)\to\RR$ by deleting the columns and taking the determinant, respectively. Observe that this map is continuous and that the image of $A$ is nonzero. As such, the preimage of any open neighborhood of the image of $A$ not intersecting zero gives an open neighborhood of $A$ in $\mathrm{Mat}_{m\times n}(\RR)$ of matrices of full rank, as desired. 
 \end{proof}
 We can show that immersions and submersions are local conditions. 
-\begin{proposition}
+\begin{proposition}\label{prop: immersions and submersions are local}
     Let $M,N$ be smooth $m,n$ manifolds, respectively, and $F:M\to N$ a smooth map. Then:
     \begin{enumerate}[label=(\roman*)]
         \item If $dF_{p}$ is injective, there exists an open neighborhood of $p$ on which $dF_{(-)}$ is injective. 
