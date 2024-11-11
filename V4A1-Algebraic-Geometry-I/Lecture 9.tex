@@ -86,13 +86,13 @@ We now specialize to schemes.
     We should in some sense consider \Cref{ex: doubled origin,ex: projective line} quite surprising since the line with doubled origin will serve as an example of a non-separated scheme which are poorly behaved, while the projective line will serve as an example of a proper scheme which are extremely well-behaved, even though they are obtained by gluing the same space $\A^{1}_{k}$. 
 \end{remark}
 We can now begin a discussion of properties of schemes, by listing definitions of properties of schemes. We first consider topological properties, which are detected on the underlying topological space. 
-\begin{definition}[Connected]\label{def: connected scheme}
+\begin{definition}[Connected Scheme]\label{def: connected scheme}
     Let $X$ be a scheme. $X$ is connected if there does not exist $X_{1},X_{2}$ nonempty proper closed subsets of $X$ with $X=X_{1}\sqcup X_{2}$. 
 \end{definition}
-\begin{definition}[Irreducible]\label{def: irreducible}
+\begin{definition}[Irreducible Scheme]\label{def: irreducible}
     Let $X$ be a scheme. $X$ is irreducible if there does not exist $U_{1},U_{2}$ nonempty proper closed subsets of $X$ with $X_{1}\cup X_{2}=X$. 
 \end{definition}
-\begin{definition}[Quasicompact]\label{def: quasicompact}
+\begin{definition}[Quasicompact Scheme]\label{def: quasicompact}
     Let $X$ be a scheme. $X$ is quasicompact if for every open cover of $X$ admits a finite subcover. 
 \end{definition}
 \begin{remark}
@@ -102,9 +102,13 @@ We can now begin a discussion of properties of schemes, by listing definitions o
     Any affine scheme is quasicompact by \Cref{lem: affine schemes are quasicompact}.
 \end{example}
 We conclude with the definition of a scheme-theoretic property -- a property detected on the level of structure sheaves. 
-\begin{definition}[Locally Noetherian]\label{lem: locally Noetherian}
+\begin{definition}[Locally Noetherian Scheme]\label{lem: locally Noetherian}
     Let $X$ be a scheme. $X$ is locally Noetherian if it admits an affine open covering by spectra of Noetherian rings. 
 \end{definition}
-\begin{remark}
+\begin{remark}\label{rmk: locally Noetherian is Zariski local property}
     This condition can be shown to be equivalent to every affine open subset of $X$ being the spectrum of a Noetherian ring. 
 \end{remark}
+A locally Noetherian scheme that is quasicompact is said to be Noetherian. 
+\begin{definition}[Noetherian Scheme]\label{def: Noetherian}
+    Let $X$ be a scheme. $X$ is Noetherian if it is locally Noetherian and quasicompact. 
+\end{definition}
