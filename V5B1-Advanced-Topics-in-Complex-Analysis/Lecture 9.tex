@@ -131,7 +131,9 @@ Consider $\CC^{n}$ which is an $n$-dimensional complex vector space and thus a $
     An orientation on $\CC^{n}$ is a choice of coordinates on $\CC^{n}$ as a $2n$-dimensional real vector space. 
 \end{definition}
 \begin{remark}\label{rmk: choice of orientations}
-    We will use the orientation $(a_{1},b_{1},a_{2},b_{2},\dots,a_{n},b_{n})\in\RR^{2n}$ for $(z_{1},\dots,z_{n})\in\CC^{n}$ with $z_{j}=a_{j}+b_{j}i$. This behaves well with respect to taking products of complex vector spaces. 
+    We will use the orientation 
+    $$(a_{1},b_{1},a_{2},b_{2},\dots,a_{n},b_{n})\in\RR^{2n}$$ 
+    for $(z_{1},\dots,z_{n})\in\CC^{n}$ with $z_{j}=a_{j}+b_{j}i$. This behaves well with respect to taking products of complex vector spaces. 
 \end{remark}
 $\CC^{n}$ is a normed vector space. 
 \begin{definition}[Maximum Norm]\label{def: maximum norm}
@@ -145,33 +147,38 @@ $\CC^{n}$ is a normed vector space.
 \end{remark}
 Open discs plays a central role in univariate complex analysis. Its analogue in complex analysis of several variables is the polydisc. 
 \begin{definition}[Polydisc]\label{def: polydisc}
-    Let $z\in\CC^{n}$ and $r=(r_{1},\dots,r_{n})\in\RR_{>0}^{n}$. The polydisc $D_{r}(z)$ of polyradius $r$ is given by the set 
-    $$\{z'\in\CC^{n}:|z_{j}-z_{j}'|<r_{j}, \forall 1\leq j\leq n\}.$$
+    Let $\tau\in\CC^{n}$ and $r=(r_{1},\dots,r_{n})\in\RR_{>0}^{n}$. The polydisc $D_{r}(\tau)$ of polyradius $r$ is given by the set 
+    $$\{z\in\CC^{n}:|\tau_{j}-z_{j}|<r_{j}, \forall 1\leq j\leq n\}.$$
 \end{definition}
 \begin{remark}
-    We can also define the polydisc $D_{r}(z)$ of radius $r\in\RR_{>0}$ as 
-    $$\{z'\in\CC^{n}:|z_{j}-z_{j}'|<r, \forall 1\leq j\leq n\}.$$
+    We can also define the polydisc $D_{r}(\tau)$ of radius $r\in\RR_{>0}$ as 
+    $$\{z\in\CC^{n}:|\tau_{j}-z_{j}|<r, \forall 1\leq j\leq n\}.$$
 \end{remark}
 We also have an analogue of the open ball. 
 \begin{definition}[Multivariate Ball]\label{def: multivariate open ball}
-    Let $z\in\CC^{n}$ and $r\in\RR_{>0}$ the ball $B_{r}(z)$ is given by the set 
-    $$\{z'\in\CC^{n}:\Vert z-z'\Vert < r\}.$$
+    Let $\tau\in\CC^{n}$ and $r\in\RR_{>0}$ the ball $B_{r}(\tau)$ is given by the set 
+    $$\{z\in\CC^{n}:\Vert \tau-z\Vert < r\}.$$
 \end{definition}
 \begin{remark}
     The open balls form a basis for the analytic topology on $\CC^{n}$. 
 \end{remark}
-Let us define the multivariate analogue of holomorphic functions. 
+Let us define the multivariate analogue of holomorphic functions via real and complex differentiable functions. 
+\begin{definition}[Real Differentiable]\label{def: real differentiable}
+    Let $U\subseteq\CC^{n}$ be an open set and $f:U\to\CC$ a function. $f$ is real differentiable at $\tau\in U$ if there exist continuous functions $\Delta_{1},\dots,\Delta_{n},E_{1},\dots,E_{n}$ continuous at $\tau$ such that 
+    $$f(z)-f(\tau)=\sum_{j=1}^{n}\Delta_{j}(z)(z_{j}-\tau_{j})+\sum_{j=1}^{n}E_{j}(z)(\overline{z}_{j}-\overline{\tau}_{j})$$
+    for all $z\in U$. 
+\end{definition}
 \begin{definition}[Complex Differentiable]\label{def: complex differentiable function}
-    Let $U\subseteq\CC^{n}$ be an open set and $f:U\to \CC$ a function. $f$ is complex differentiable at $z\in U$ if there exist functions $\Delta_{1},\dots,\Delta_{n}:U\to\CC$ continuous at $z$ such that 
-    $$f(z')-f(z)=\sum_{j=1}^{n}\Delta_{j}(z)(z'_{j}-z_{j})$$
-    for all $z'\in U$. 
+    Let $U\subseteq\CC^{n}$ be an open set and $f:U\to \CC$ a function. $f$ is complex differentiable at $\tau\in U$ if there exist functions $\Delta_{1},\dots,\Delta_{n}:U\to\CC$ continuous at $z$ such that 
+    $$f(z)-f(\tau)=\sum_{j=1}^{n}\Delta_{j}(z)(z_{j}-\tau_{j})$$
+    for all $z\in U$. 
 \end{definition}
 \begin{definition}[Holomorphic Function]\label{def: holomorphic function}
     Let $U\subseteq\CC^{n}$ be an open set and $f:U\to \CC$ a function. $f$ is holomorphic on $U$ if $f$ is complex differentiable at all $z\in U$. 
 \end{definition}
 The functions $\Delta_{j},\eta_{j}$ play a special role. 
 \begin{definition}[Wirtinger Derivatives]\label{def: Wirtinger derivatives}
-    Let $U\subseteq\CC^{n}$ be an open set and $f:U\to \CC$ a function. The Wirtinger derivatives of $f$ at $z$ are given by $\Delta_{j}(z),\eta_{j}(z)$ where 
-    $$f(z')-f(z)=\sum_{j=1}^{n}\Delta_{j}(z)(z'_{j}-z_{j})+\sum_{j=1}^{n}\eta_{j}(z)(\overline{z'_{j}}-\overline{z_{j}})$$
-    with $\Delta_{1},\dots,\Delta_{n},\eta_{1},\dots,\eta_{n}:U\to\CC$ continuous for all $z'\in U$.
+    Let $U\subseteq\CC^{n}$ be an open set and $f:U\to \CC$ a function. The Wirtinger derivatives of $f$ at $\tau$ are given by $\Delta_{j}(z),\eta_{j}(z)$ where 
+    $$f(z)-f(a)=\sum_{j=1}^{n}\Delta_{j}(z)(z_{j}-\tau_{j})+\sum_{j=1}^{n}E_{j}(z)(\overline{z}_{j}-\overline{\tau}_{j})$$
+    with $\Delta_{1},\dots,\Delta_{n},E_{1},\dots,E_{n}:U\to\CC$ continuous for all $z\in U$.
 \end{definition}
