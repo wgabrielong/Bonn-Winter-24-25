@@ -61,32 +61,8 @@ We deduce that taking the spectrum of global sections is the left ajdoint of the
 \end{proof}
 We can show that fibered products over diagrams of affine schemes are just spectra of tensor products of rings. 
 \begin{proposition}\label{prop: fibered products of affine schemes}
-    Let $\spec(A)\to\spec(R),\spec(B)\to\spec(R)$. Then the fibered product $\spec(A)\times_{\spec(R)}\spec(B)$ is isomorphic to $\spec(A\otimes_{R}B)$. 
+    Let $\spec(A)\to\spec(R),\spec(B)\to\spec(R)$. Then the fibered product $\spec(A)\times_{\spec(R)}\spec(B)$ is canonically isomorphic to $\spec(A\otimes_{R}B)$. 
 \end{proposition}
 \begin{proof}
     \Cref{corr: spectra of global sections is left adjoint of the inclusion} shows that the inclusion $\mathsf{AffSch}\to\Sch$ is a right adjoint and thus the functor preserves limits and in particular fibered products. The fibered product as an affine scheme, if it exists, will agree with the fibered product in $\Sch$. Under the antiequivalence of $\mathsf{AffSch}$ and $\Ring$ in \Cref{prop: affine schemes is antiequivalent to rings}, the fibered product in $\mathsf{AffSch}$ is computed as a pushout in $\Ring$ which is exactly the tensor product. 
 \end{proof}
-One place fibered products are ubiquitous is in the computation of fibers of a morphism. 
-\begin{definition}[Fiber]\label{def: fiber of morphism}
-    Let $f:X\to Y$ be a morphism of schemes and $y\in Y$ with residue field $\kappa(y)$. The fiber $X_{y}$ of $f$ over $Y$ is the fibered product $X\times_{Y}\spec(\kappa(y))$. 
-\end{definition}
-More explicitly, the fiber is induced by the following diagram.
-$$% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYX3t5fT1YXFx0aW1lc197WX1cXHNwZWMoXFxrYXBwYSh5KSkiXSxbMCwxLCJcXHNwZWMoXFxrYXBwYSh5KSkiXSxbMiwwLCJYIl0sWzIsMSwiWSJdLFswLDJdLFsyLDNdLFsxLDNdLFswLDFdXQ==
-\begin{tikzcd}
-	{X_{y}=X\times_{Y}\spec(\kappa(y))} && X \\
-	{\spec(\kappa(y))} && Y
-	\arrow[from=1-1, to=1-3]
-	\arrow[from=1-1, to=2-1]
-	\arrow[from=1-3, to=2-3]
-	\arrow[from=2-1, to=2-3]
-\end{tikzcd}$$
-In the case of $Y$ having a generic point, we can construct generic and closed fibers. 
-\begin{definition}[Generic Fiber]\label{def: generic fiber}
-    Let $f:X\to Y$ be a morphism of schemes and $\eta\in Y$ the unique generic point of $Y$ with residue field $\kappa(\eta)$. The generic fiber $X_{\eta}$ of $f$ over $Y$ is the fibered product $X\times_{Y}\spec(\kappa(\eta))$.
-\end{definition}
-\begin{definition}[Closed Fiber]\label{def: closed fiber}
-    Let $f:X\to Y$ be a morphism of schemes and $y\in Y$ a closed point with residue field $\kappa(y)$. The closed fiber $X_{y}$ of $f$ over $Y$ is the fibered product $X\times_{Y}\spec(\kappa(y))$.
-\end{definition}
-\begin{example}
-    Let $A$ be a discrete valuation ring. Then $\spec(A)=\{\eta,\pi\}$ where $\eta$ is the generic point and $\pi$ the prime ideal corresponding to the uniformizer. A scheme $X$ over $\spec(A)$ has two fibers: the generic fiber $X_{\eta}$ and the closed fiber $X_{\pi}$. 
-\end{example}
