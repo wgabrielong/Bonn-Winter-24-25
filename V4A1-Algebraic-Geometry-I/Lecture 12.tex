@@ -200,6 +200,16 @@ Returning to a discussion of arithmetic, we consider conjugate $k$-schemes.
     \end{tikzcd}$$
 \end{definition}
 Note that $X_{\sigma}\to X$ is an isomorphism of abstract schemes, but not necessarily as $k$-schemes, since $X_{\sigma}$ has a different structure map that commutes with the structure map of $X$ up to $\sigma$. 
-\begin{example}
-    Let $X=\spec(\RR[x_{1},x_{2}]/(x_{1}^{2}+x_{2}^{2}-\pi))$ Since $\pi$ is transcendental, there exists an automorphism $\sigma$ of $\RR$ taking $\pi$ to $-\pi$ and fixing all other elements. $X$ is nonempty but $X_{\sigma}=\spec(\RR[x_{1},x_{2}]/(x_{1}^{2}+x_{2}^{2}+\pi))$ has no $\RR$-rational points. 
+\begin{example}\label{ex: non-isomorphic as schemes over the base}
+    Note that $\Aut(\RR)$ is the trivial group. Consider the $\spec(\QQ(\sqrt{2}))$ scheme $X=\spec(\RR)$ induced by the inclusion $\QQ(\sqrt{2})\hookrightarrow\RR$. Let $\sigma\in\Gal(\QQ(\sqrt{2})/\QQ)$ be the non-trivial element of the Galois group of the quadratic extension. We can consider $X_{\sigma}$ obtained as the fibered product 
+    $$% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYX3tcXHNpZ21hfSJdLFsyLDAsIlgiXSxbMiwxLCJcXHNwZWMoXFxRUShcXHNxcnR7Mn0pKSJdLFswLDEsIlxcc3BlYyhcXFFRKFxcc3FydHsyfSkpIl0sWzMsMiwiXFxzaWdtYSIsMl0sWzEsMl0sWzAsM10sWzAsMV1d
+    \begin{tikzcd}
+        {X_{\sigma}} && X \\
+        {\spec(\QQ(\sqrt{2}))} && {\spec(\QQ(\sqrt{2})).}
+        \arrow[from=1-1, to=1-3]
+        \arrow[from=1-1, to=2-1]
+        \arrow[from=1-3, to=2-3]
+        \arrow["\sigma"', from=2-1, to=2-3]
+    \end{tikzcd}$$
+    If $X$ and $X_{\sigma}$ are isomorphic as $\QQ(\sqrt{2})$-schemes, there would be an automorphism of $\RR$ by $\sqrt{2}\mapsto-\sqrt{2}$, a contradiction. 
 \end{example}
