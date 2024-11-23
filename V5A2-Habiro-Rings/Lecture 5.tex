@@ -1,0 +1,48 @@
+\section{Lecture 5 -- 22nd November 2024}\label{sec: lecture 5}
+We continue our discussion of $q$-series and in particular a property of the modified Nahm sum considered in \Cref{corr: q-difference equation of modified 1x1 Nahm sum}.\marginpar{As it stands, the proofs and structure for this lecture are more rough than usual, and will be updated in due course.}
+
+The following definition is due to Konsevich-Soibelman \cite{DTInvariants}.
+\begin{definition}[Admissable Series]\label{def: admissable series}
+    A series $f\in\ZZ((q))[[t]]$ is admissable if it can be written as 
+    $$f=\prod_{n\geq1}\prod_{i\in\ZZ}(q^{i}t^{n};q)_{\infty}^{a_{n,i}}$$
+    such that for each $n$ only finitely many $a_{n,i}$ are nonzero. 
+\end{definition}
+\begin{remark}
+    These $a_{n,i}$'s are precisely Donaldson-Thomas invariants. 
+\end{remark}
+Admissable series force an algebraicity condition on the $q$, allowing $f$ to be written as an element of $\ZZ[q][[t]]$. Up to a condition on the residue of the series $f$ mod $(t)$, series in $\ZZ((q))[[t]]$ admit such an expansion. 
+\begin{proposition}
+    Let $f\in\ZZ((q))[[t]]$. If $f\equiv1\pmod{(t)}$ then $f$ admits a unique expansion as an admissable series. 
+\end{proposition}
+This result is in fact much more general and it can be shown that the modified Nahm sum 
+$$f_{a}(t,q)=\sum_{n\geq0}(-1)^{an}\frac{q^{\frac{1}{2}an^{2}-\frac{1}{2}an}}{(q;q)_{n}}t^{n}$$
+as previously defined is admissable. The original proof is highly involved, and we will instead offer a simpler exposition of the same result. Recall from \Cref{prop: logarithm at worst simple poles at roots of unity}, we have 
+\begin{equation}\label{eqn: modified Nahm sum as exponent of sum}
+    (q^{i}t;q)_{\infty}=\exp\left(-\sum_{\ell\geq 1}\frac{1}{\ell}\cdot\frac{q^{i\ell}t^{n\ell}}{1-q^{\ell}}\right)
+\end{equation}
+and further recall that $\ZZ((q))[[t]]$ is a $\lambda$-ring -- admits an action with $\NN$ as a multiplicative monoid -- and admits Adams operations $\psi_{n}:\ZZ((q))[[t]]\to\ZZ((q))[[t]]$ by $t\mapsto t^{n},q\mapsto q^{n}$. The Adams operations allow us to rewrite (\ref{eqn: modified Nahm sum as exponent of sum}) as 
+\begin{equation}\label{eqn: modified Nahm sum as exponent of Adams sum}
+    \exp\left(-\sum_{\ell\geq1}\psi_{\ell}\left(\frac{q^{i}t^{n}}{1-q}\right)\right).
+\end{equation}
+We introduce the notion of the plethystic exponential.
+\begin{definition}[Plethystic Exponential]\label{def: Plethystic exponential}
+    Let $A$ be a $\lambda$-ring and $\sum_{\ell\geq 1}\frac{a_{\ell}}{\ell}$ a convergent series in $A$. The plethystic exponential is of the series is given by 
+    $$\exp\left(\sum_{\ell\geq 1}\frac{1}{\ell}\psi_{\ell}(a_{\ell})\right).$$
+\end{definition}
+Now taking 
+$$\phi(t,q)=-\sum_{n\geq1}\sum_{i\in\ZZ}a_{n,i}q^{i}t^{n}\in\ZZ((q))[[t]]$$
+writing $\frac{\phi(t,q)}{1-q}$ as the plethystic logarithm of $f_{a}(t,q)$, inverse to the plethystic exponential, the coefficients of the expansion as an admissable series will be those coefficients of the plethystic logarithm since the plethystic exponential gives an isomorphism $t\QQ[q^{\pm}][[t]]\to 1+t\QQ[q^{\pm}][[t]]$. It thus suffices to show that the plethystic logarithm of $f_{a}$ is a function that is a sum $\frac{\phi_{0}(t)}{1-q}$ with an element of $\QQ[q^{\pm}][[t]]$. 
+
+Now using the ansatz
+\begin{equation}\label{eqn: plethystic exponential ansatz}
+    f_{a}(t,q)=\exp\left(\sum_{\ell\geq 1}\frac{1}{\ell}\frac{\phi_{0}(t^{\ell})}{1-q^{\ell}}\right)g_{a}(t,q)
+\end{equation}
+we show that there exists a chioce of function $\psi_{0}(t)$ so that the remainder $g_{a}(t,q)\in 1+t\QQ[q^{\pm}][[t]]$ and from which the result would follow by application of the Plethystic exponential. But a choice of $\phi_{0}\in t\cdot\QQ[[t]]$ can be made  such that $\sum_{\ell\geq 1}\frac{\phi_{0}(t^{\ell})}{\ell^{2}}=-V(t)$. 
+
+This is gives the desired result as stated below. 
+\begin{theorem}[Kontsevich-Soibelman, Efimov]\label{thm: modified 1x1 Nahm sum is admissable}
+    The $q$-series 
+    $$f_{a}(t,q)=\sum_{n\geq0}(-1)^{an}\frac{q^{\frac{1}{2}an^{2}-\frac{1}{2}an}}{(q;q)_{n}}t^{n}$$
+    is admissable. 
+\end{theorem}
+
