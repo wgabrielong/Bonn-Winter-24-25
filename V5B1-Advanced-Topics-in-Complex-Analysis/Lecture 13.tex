@@ -24,10 +24,10 @@ Convergence is defined as follows.
 \end{definition}
 We can provide a sufficient criterion for convergence. 
 \begin{proposition}\label{prop: sufficient conditions for convergence}
-    Let $f(z)=\sum_{\alpha\in\ZZ_{\geq0}^{n}}c_{\alpha}z^{\alpha}$ be a formal complex power series and $\tau\in\CC^{n}\setminus\{0\}$ such that $|c_{\alpha}\tau^{\alpha}|$ is bounded. Then $f(z)$ is uniformly convergent for all $z\in \overline{B_{|\tau|}(0)}^{\circ}$.\marginpar{Proposition 3.1} 
+    Let $f(z)=\sum_{\alpha\in\ZZ_{\geq0}^{n}}c_{\alpha}z^{\alpha}$ be a formal complex power series and $\tau\in\CC^{n}\setminus\{0\}$ such that $|c_{\alpha}\tau^{\alpha}|$ is bounded. Then $f(z)$ is uniformly convergent for all $z\in B_{|\tau|}(0)$.\marginpar{Proposition 3.1} 
 \end{proposition}
 \begin{proof}
-    For any $z\in \overline{B_{|\tau|}(0)}^{\circ}$, we have $|z|=\lambda|\tau|$ for some $0<\lambda<1$. Thus by boundedness of $|c_{\alpha}z^{\alpha}|\leq|c_{\alpha}\tau^{\alpha}|\cdot\lambda^{|\alpha|}$ and the claim follows from $\sum_{\alpha\in\ZZ_{\geq0}^{n}}\lambda^{|\alpha|}$ being convergent. 
+    For any $z\in B_{|\tau|}(0)$, we have $|z|=\lambda|\tau|$ for some $0<\lambda<1$. Thus by boundedness of $|c_{\alpha}z^{\alpha}|\leq|c_{\alpha}\tau^{\alpha}|\cdot\lambda^{|\alpha|}$ and the claim follows from $\sum_{\alpha\in\ZZ_{\geq0}^{n}}\lambda^{|\alpha|}$ being convergent. 
 \end{proof}
 More generally, we can write holomorphic functions as a convergent power series in the following way. 
 \begin{theorem}\label{thm: power series expansion of holomorphic functions}
