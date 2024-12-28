@@ -36,22 +36,26 @@ One of the most elementary examples of an extension proerty is the extension ove
 We now introduce the Bochner-Martinelli kernel, which will play a key role in what follows. 
 \begin{definition}[Bochner-Martinelli Kernel]\label{def: Bochner-Martinelli kernel}
     The Bochner-Martinelli kernel is given by \marginpar{Definition 1.2}
-    $$B(w,z)=\frac{(n-1)!}{(2\pi i)^{n}}\sum_{j=1}^{n}\frac{1}{\Vert w_{j}-z_{j}\Vert^{2n}}\dform\overline{w_{1}}\wedge\dform w_{1}\wedge\dots\wedge\dform w_{j-1}\wedge\dform w_{j}\wedge \dform\overline{w_{j+1}}\wedge\dots\wedge\dform w_{n}.$$
+    \footnotesize
+    $$\beta(w,z)=\frac{(n-1)!}{(2\pi i)^{n}}\sum_{j=1}^{n}\frac{1}{\Vert w_{j}-z_{j}\Vert^{2n}}\dform\overline{w_{1}}\wedge\dform w_{1}\wedge\dots\wedge\dform w_{j-1}\wedge\dform w_{j}\wedge \dform\overline{w_{j+1}}\wedge\dots\wedge\dform\overline{w_{n}}\wedge\dform w_{n}.$$
+    \large
 \end{definition}
 \begin{remark}
     That is, in the expression of \Cref{def: Bochner-Martinelli kernel}, the wedge-factor $\dform \overline{w_{j}}$ is omitted, making the Bochner-Martinelli kernel a form of type $(n,n-1,0,0)$ in the $\dform w, \dform\overline{w}, \dform z,\dform \overline{z}$'s, respectively. 
 \end{remark}
 We prove an elementary property of the Bochner-Martinelli kernel. 
 \begin{lemma}\label{lem: Bochner-Martinelli computation}
-    Let $U\subseteq\CC^{n}$ be a bounded open set with smooth boundary and $\tau\in U$. Then $\dform(f(w)B(w,z))=\overline{\partial}f(w)\wedge B(w,z)$. 
+    Let $U\subseteq\CC^{n}$ be a bounded open set with smooth boundary and $\tau\in U$ and $f$ continuously differentiable on $\partial U$. Then $\dform(f(w)\beta(w,z))=\overline{\partial}f(w)\wedge \beta(w,z)$. 
 \end{lemma}
 \begin{proof}
-    Note that $f(w)B(w,\tau)$ contain the holomorphic forms $\dform w_{j}$ so we can compute 
+    Note that $f(w)\beta(w,\tau)$ contain the holomorphic forms $\dform w_{j}$ so we can compute 
+    \footnotesize
     \begin{align*}
-        \dform(f(w)B(w,\tau)) &= \overline{\partial}(f(w)B(w,\tau)) \\
-        &= \overline{\partial}f(w)\wedge B(w,\tau) \\
+        \dform(f(w)\beta(w,\tau)) &= \overline{\partial}(f(w)\beta(w,\tau)) \\
+        &= \overline{\partial}f(w)\wedge \beta(w,\tau) \\
         &\hspace{1cm}+ f(w)\frac{(n-1)!}{(2\pi i)^{n}}\sum_{j=1}^{n}\partial_{\overline{w_{j}}}\left(\frac{\overline{w_{j}}-\overline{\tau_{j}}}{\Vert w-\tau\Vert^{2n}}\right)\dform\overline{w_{1}}\wedge\dform w_{1}\wedge\dots\wedge\dform\overline{w_{n}}\wedge\dform w_{n}
     \end{align*}
+    \large
     but
     \begin{align*}
         \sum_{j=1}^{n}\partial_{\overline{w_{j}}}\left(\frac{\overline{w_{j}}-\overline{\tau_{j}}}{\Vert w-\tau\Vert^{2n}}\right) &= \sum_{j=1}^{n}\left(\frac{1}{\Vert w-z\Vert^{2n}}-n\frac{|w_{j}-\tau_{j}|^{2}}{\Vert w-\tau\Vert^{2n+2}}\right) \\
