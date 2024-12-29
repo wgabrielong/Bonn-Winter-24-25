@@ -60,3 +60,12 @@ This in fact defines a smooth vector field.
     $$(d\Psi_{-t})_{\Psi(t,x)}=(\partial_{x_{i}}\Psi^{j}(-t,x))_{1\leq i,j\leq n}.$$
     As such, we have $d\Psi_{-t}Y_{\Psi(t,x)}=(\partial_{x_{i}}\Psi^{j}(-t,x))_{1\leq i,j\leq n}$ giving the claim. 
 \end{proof}
+We will in fact show that the Lie derivative can be computed in terms of the Lie bracket, for which we will require the following lemma. 
+\begin{lemma}\label{lem: canonical form for a smooth vector field}
+    Let $M$ be a smooth manifold and let $X\in\Xfrak(M)$ a smooth vector field. If $X_{p}\neq0$ for some $p\in M$ then there exists a chart $(U,\phi)$ around $p$ with respect to which $X=\partial_{x_{1}}$.
+\end{lemma}
+\begin{proof}
+    Let $(U,\phi)$ be a chart around $p$ with coordinates $(x_{1},\dots,x_{m})$ and let $S$ be the hypersurface defined by $x_{j}=0$ for $X^{j}_{p}\neq0$ with $X$ the vector field as above. Shrinking $S$ such that $X$ is nowhere tangent to $S$ the flowout theorem \cite[Thm. 9.20]{LeeSM} implies that there is a flow domain $\Ocal_{\delta}\subseteq\RR\times S$ such that the flow of $X$ restricts to a diffeomorphism $\Phi$ from $\Ocal_{\delta}$ to an open subset $W\subseteq M$ containing $S$. 
+
+    There is a product neighborhood $(-\varepsilon,\varepsilon)\subseteq W_{0}$ of $(0,p)$ in $\Ocal_{\delta}$. Now taking a smooth local parametrization $X:\Omega\to S$ with image contained in $W_{0}$ and $\Omega$ open in $\RR^{m-1}$ with coordinates $x_{2},\dots,x_{n}$. It follows that the map $\Psi:(-\varepsilon,\varepsilon)\times\Omega\to M$ by $\Psi(t,x_{2},\dots,x_{n})=\Phi(t,X(x_{2},\dots,x_{m}))$ iwhich is a diffeomprhpism onto a neighborhood of $p$ in $M$. Moreover this map pushes $\partial_{t}$ to itself with $\Phi_{*}(\partial_{t})=X$ so $\Psi_{*}(\partial_{t})=X$ with $\Psi$ a smooth coordinate chart with the desired representation. The claim follows by relabeling. 
+\end{proof}

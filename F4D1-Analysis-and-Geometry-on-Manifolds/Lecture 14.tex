@@ -1,7 +1,7 @@
 \section{Lecture 14 -- 26th November 2024}\label{sec: lecture 14}
 We complete the proof of \Cref{thm: sard} by way of various lemmata. 
 \begin{lemma}\label{lem: Ck for k large have measure zero image}
-    Let $U\subseteq\RR^{m}$, $F:U\to\RR^{n}$ be a smooth map with critical points $C\subseteq U$, and $C_{k}\subseteq C$ on which the $i$th partial derivatives of $F$ for $1\leq i\leq k$ functions of vanish. If $k>\frac{m}{n}-1$ then $F(C_{k})$ has measure zero. 
+    Let $U\subseteq\RR^{m}$, $F:U\to\RR^{n}$ be a smooth map with critical points $C\subseteq U$, and $C_{k}\subseteq C$ on which the $i$th partial derivatives of $F$ for $1\leq i\leq k$ functions of vanish. If $k>\frac{m}{n}-1$ then $F(C_{k})$ has measure zero.
 \end{lemma}
 \begin{proof}
     For each $p\in U$, there exists a closed cube $E\subseteq U$ containing $p$. By second countability, we can cover $C_{k}$ by countably many such cubes. We show $F(C_{k}\cap E)$ is of measure zero. Let $A>\sup_{q\in E}|\partial_{x}^{\alpha}(q)|$ be a constant and $|\alpha|\leq k+1$. Let $L>0$ be the side length of $E$ and $K>>1$ large a natural number. We can subdivide $E$ into cubes of sidelength $L/K$, of which there are $K^{m}$. Consider an enumeration of these subcubes and an index $i_{0}$ such that $p\in E_{i_{0}}$. 
