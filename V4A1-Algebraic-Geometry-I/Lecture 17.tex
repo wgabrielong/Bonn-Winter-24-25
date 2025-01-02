@@ -32,9 +32,15 @@ We can now define quasicoherent and coherent sheaves.
     $$\Coh(X)\hookrightarrow\QCoh(X)\hookrightarrow\Mod_{\Ocal_{X}}.$$
 \end{remark}
 Let us consider what happens on an affine scheme $\spec(A)$ for a ring $A$. 
-\begin{proposition}
+\begin{proposition}\label{prop: fully faithful exact modules on affine schemes}
     Let $A$ be a ring. The functor $\Mod_{A}\to\QCoh(\spec(A))$ by $M\mapsto\widetilde{M}$ is fully faithful and exact. 
 \end{proposition}
 \begin{proof}
-    By construction $\widetilde{M}(D(f))=M_{f}$ the localization of $M$ at $f$. The statement follows by the properties of the localization functor. 
+    The construction is functorial and localization is exact, and since exactness can be verified on stalks, the claim follows. 
+\end{proof}
+\begin{proposition}\label{prop: equivalence of categories modules on affine schemes}
+    There is an equivalence of categories between $\QCoh(\spec(A))$ and $\Mod_{A}$. 
+\end{proposition}
+\begin{proof}
+    The global sections functor is the inverse. 
 \end{proof}
