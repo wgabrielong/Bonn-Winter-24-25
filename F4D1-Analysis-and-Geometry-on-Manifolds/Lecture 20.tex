@@ -1,1 +1,36 @@
 \section{Lecture 20 -- 17th December 2024}\label{sec: lecture 20}
+The linear algebra constructions described in \Cref{sec: lecture 19} globalize to vector bundles. 
+\begin{theorem}[Omnibus Linear Algebra]\label{def: omnibus linear algebra}
+    The category of vector bundles over a fixed base is symmetric monoidal category, and the formation of $\bigwedge^{k}E, \Sym^{k}E, E\otimes E'$ are compatibile with pullback. 
+\end{theorem}
+\begin{proof}
+    This follows from the functoriality of the linear algebra constructions and of pullback. 
+\end{proof}
+Generalizing \Cref{lem: smooth vector fields form a vector space}, we can make show the following. 
+\begin{lemma}\label{lem: linear algebra of space of sections}
+    Let $M$ be a smooth manifold and $\pi:E\to M$ be a vector bundle. Then:
+    \begin{enumerate}[label=(\roman*)]
+        \item The space of sections $\Gamma(M,E)$ is an $\RR$-vector space. 
+        \item The space of sections $\Gamma(M,E)$ is a module over $C^{\infty}(M)$. 
+    \end{enumerate}
+\end{lemma}
+\begin{proof}[Proof of (i)]
+    These extend over the pointwise operations on vector spaces. 
+\end{proof}
+\begin{proof}[Proof of (ii)]
+    A smooth section can be represented by a tuple of smooth functions which naturally inherits a module action by $C^{\infty}(M)$.
+\end{proof}
+The main constructions we will consider are as follows. 
+\begin{definition}[1-Form]\label{def: 1-form}
+    Let $M$ be a smooth manifold. The space of 1-forms is $\Omega^{1}(M)=\Gamma(T^{*}M)$. 
+\end{definition}
+\begin{definition}[$k$-Form]\label{def: k-form}
+    Let $M$ be a smooth manifold. The space of 1-forms is $\Omega^{k}(M)=\Gamma(\bigwedge^{k}T^{*}M)$.
+\end{definition}
+Sections over closed submanifolds of $M$ can be defined in the following way. 
+\begin{lemma}\label{lem: sections of vector bundles over smooth closed submanifolds}
+    Let $M$ be a smooth manfiold, $A\subseteq M$ closed, $U$ an open neighborhood of $A$, and $\pi:E\to M$ be a vector bundle. If $\pi:A\to E$ is a smooth section, then there exists $\widetilde{\sigma}\in\Gamma(M,E)$ such that $\widetilde{\sigma}|_{A}=\sigma$ and $\supp(\widetilde{\sigma})\subseteq U$. 
+\end{lemma}
+\begin{proof}
+    Since sections are locally pointwise given by smooth functions on a closed subsets, the result follows by the definition of smooth functions. 
+\end{proof}

@@ -76,7 +76,7 @@ We now make the desired construction.
     Let $F:M\to M'$ be a morphism of smooth manifolds and $\pi':E'\to M'$ be a vector bundle. The pullback bundle $F^{*}E$ is the bundle induced by the fibered product $\pi:M\times_{M'}E'\to M$. 
 \end{definition}
 Moreover, we can construct vector bundles from gluing data. 
-\begin{lemma}
+\begin{lemma}\label{lem: gluing vector bundles}
     Let $M$ be a smooth manifold, $\{U_{i}\}_{i\in I}$ an open cover of $M$, and $\{E_{i}\}_{i\in I}$ a collection of $k$-dimensional real vector spaces, and $\psi_{ij}\in\GL_{k}(\RR)$ such that the following hold:
     \begin{enumerate}[label=(\arabic*)]
         \item For each $i$, $\psi_{ii}:E_{i}\to E_{i}$ is $\id_{E_{i}}$. 
@@ -89,3 +89,6 @@ Moreover, we can construct vector bundles from gluing data.
     $$E|_{V}=\left\{(v_{i})_{i\in I}\in\prod_{i\in I}E_{i}|_{V}:\psi_{ij}(v_{i}|_{U_{i}\cap U_{j}})=\psi_{ji}(v_{j}|_{U_{i}\cap U_{j}}), \forall i,j\in I\right\}$$
     produces a vector bundle. For $E'$ any vector bundle on $M$, taking its associated trivializing cover $\{U_{i}'\}_{i\in I'}$ and $\psi_{ij}=\rho_{j}\circ\rho_{i}^{-1}$.  
 \end{proof}
+\begin{remark}
+    Different gluing data as in the hypothesis of \Cref{lem: gluing vector bundles} can give rise to the same vector bundle. 
+\end{remark}
