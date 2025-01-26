@@ -1,0 +1,17 @@
+\section{Lecture 10 -- 17th January 2025}\label{sec: lecture 10}
+We continue our discussion of relative motivic cohomology. Just as classical motivic cohomology has realization maps that recover de Rham, Betti, \'{e}tale, and prismatic cohomology, so too does relative motivic cohomology. 
+
+Observe that we can consider the ring of integers Nahm number field 
+$$R=\ZZ[t_{1},\dots,t_{N},z_{1},\dots,z_{N}]/\left(1-z_{i}=(-1)^{A_{ii}}t_{i}z_{1}^{A_{i1}}\dots z_{N}^{A_{iN}}\right)$$
+of \Cref{eqn: number field of Nahm equation} as a ring over $\ZZ[t_{1},\dots,t_{N}]$. Recall that for $R=\ZZ[t,\frac{1}{1-t}]$ as discussed in \Cref{sec: lecture 9}, we can define relative motivic cohomology $H^{i}(\ZZ(n)(R/\ZZ[t^{\pm}]))$ where there is a map 
+$$H^{1}(\ZZ(2)(R/\ZZ[t^{\pm}]))\longrightarrow H^{i}(\ZZ(1)(R/\ZZ[t^{\pm}]))=R[1/t]^{\times}/t^{\ZZ}$$
+induced by the logarithmic derivative taking $-\Li^{\mathrm{univ}}_{2}(t)$ to $[\frac{1}{1-t}]$. Under ``de Rham realization,'' the diloagarithm class goes to $-\log(1-t)$. This theory of realizations of motivic cohomology also explains the factor $\prod_{i=0}^{m-1}(1-\zeta_{m}t)^{i/m}$ at the expansion of Nahm sums at $m$th roots of unity \Cref{thm: Nahm sum asymptotics at roots of unity}.
+
+For $R$ a ring, motivic cohomology admits Betti and \'{e}tale realizations
+$$H^{i}(R,\ZZ(n))\to H^{i}_{\mathsf{sing}}(\spec(R)(\CC),\ZZ), H^{i}(R,\ZZ(n))\to H^{i}_{\mathsf{\acute{e}t}}(\spec(R[1/m]),\ZZ/m\ZZ(n)).$$
+We can describe this explicitly in motivic weight $n=1$. This produces maps $R^{\times}$ to $\ZZ$-torsors to $\spec(R)(\CC)$ taking $f$ to a $\ZZ$-torsor of choices of $\log(f)$ in the Betti setting and $R^{\times}$ to $\mu_{m}$-torsors over $\spec(R)$. Analogous constructions can be made for relative motivic cohomology. In relative motivic cohomology, the same constructions yield maps
+$$H^{i}(\ZZ(n)(R/\ZZ[t^{\pm}]))\to H^{i}_{\mathsf{sing}}\left(\spec(R)(\CC)\times_{(\CC^{\times})^{N}}\CC^{N}\right)$$
+$$ H^{i}(\ZZ(n)(R/\ZZ[t^{\pm}]))\to H^{i}_{\mathsf{\acute{e}t}}\left(\spec(R[1/m, t_{1}^{1/m},\dots,t_{N}^{1/m}]),\ZZ/m\ZZ(n)\right)$$
+where in the first case we the fibered product is taken over the map $\exp:\CC^{N}\to(\CC^{\times})^{N}$. Here, we observe that relative motivic cohomology still give \'{e}tale cohomology classes, but these only start to appear after extracting some roots of the coordinates. 
+
+In this framework, it can be seen that the Betti realization of the diloagarithm is a well-defined function on $\CC\setminus(2\pi i)\ZZ$ with at most simple poles at $(2\pi i)\ZZ$, and residues $\pm(2\pi i)n$ at $2\pi i n$. In particular, the diloagarithm realizes to a $\ZZ$-local system on $\CC\setminus(2\pi i)\ZZ$ whose mononodromy around $2\pi i n$ is $n$. Similarly, the \'{e}tale realization produces precisely the product $\prod_{i=0}^{m-1}(1-\zeta_{m}t)^{i/m}$ alluded to above. This recovers a construction of Calegari-Garoufalidis-Zagier as well as the cyclic quantum dilogarithm. 
