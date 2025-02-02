@@ -1,10 +1,20 @@
 \section{Lecture 3 -- 8th November 2024}\label{sec: lecture 3}
 Let situate our discussion of the phenomena encountered in \Cref{sec: lecture 2} in a larger context, with an eye towards discussing the observations made here more rigorously over the rest of the semester.
 
-With \Cref{prop: asymptotics q t Pochhammer at 1,prop: asymptotics of q t Pochhammer at root of unity} in hand, we can attempt to give a high-level interpretation of the terms appearing and consider the $p$-adic properties of the terms of the power series $O(h)$ appearing in (\ref{eqn: asymptotics of q t Pochhammer at 1}) and (\ref{eqn: asymptotics of q t Pochhammer at root of unity}). In fact, it can be shown that the $\Li_{2}$ term of the abovementioned equations give the Borel regulator on the third algebraic $K$-group, and the product $\prod_{i=0}^{m-1}(1-\zeta_{m}^{i}t)$ of the latter equation is the modulo $m$ \'{e}tale regulator of the third algebraic $K$-group. 
+Recall that per \Cref{prop: asymptotics q t Pochhammer at 1} that the asymptotics of the $q$-Pochhammer $(t;q)_{\infty}$ at $q\to 1$ is given by 
+$$\exp\left(\frac{\Li_{2}(t)}{h}\right)\cdot\sqrt{1-t}\cdot O(h)$$
+where $O(h)\in\QQ[t,\frac{1}{1-t}][[h]]$. Note that the $q$-Pochhammer naturally admits an expansion in the ring $\QQ[[t]]((h))$ of power series in $t$ and Laurent series in $h$. Thus, dividing by the exponential prefactor, we would expect the ratio 
+$$\frac{(t;q)_{\infty}}{\exp\left(\frac{\Li_{2}(t)}{h}\right)\sqrt{1-t^{2}}}$$
+to lie in $\QQ[t,\frac{1}{1-t}][[h]]\subseteq\QQ[[t,h]]$ as well. Similarly following \Cref{prop: asymptotics of q t Pochhammer at root of unity}, we expect the ratio 
+$$\frac{(t;q)_{\infty}}{\exp\left(\frac{\Li_{2}(t^{m})}{m^{2}h}\right)\frac{\sqrt{1-t^{m}}}{\prod_{i=0}^{m-1}(1-\zeta_{m}^{i}t)^{i/m}}}$$
+to lie in $\QQ(\zeta_{m})[t,\frac{1}{1-t^{m}}][[h]]$ as $q\to\zeta_{m}$. It is especially surprising that these expansions have good algebraicity properties in the variable $t$.  
 
-Given a Nahm sum $f_{A}(q)$, we can associate a number field $\KK$ as in (\ref{eqn: number field of Nahm equation}). We can consider $g_{A,m}$ of $O(h)$ in (\ref{eqn: asymptotics of q t Pochhammer at root of unity}) with 
-$$g_{A,m}\in \frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot\KK(\zeta_{m})[[h]]=\frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot\KK(\zeta_{m})[[q-\zeta_{m}]]$$
+Moreover, these power series $O(h)$ appearing above have good $p$-adic properties, giving arithmetic meaning to the expansions of $(t;q)_{\infty}$ with the $\Li_{2}$ term of the abovementioned equations giving the Borel regulator on the third algebraic $K$-group, and the term $\prod_{i=0}^{m-1}(1-\zeta_{m}^{i}t)$ of the latter equation the modulo $m$ \'{e}tale regulator of the third algebraic $K$-group. 
+
+This peculiar behavior of such power series was first observed by Garoufalidis and Zagier who showed that for a Nahm sum $f_{A}(q)$ with associated number field $\KK$
+$$f_{A}(q)\sim\exp(\Li_{2}(\xi))\cdot\frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot O(h)$$
+for some class $\xi\in K_{3}(\KK)$ and $O(h)\in\KK(\zeta_{m})[[h]]$ as $q\to\zeta_{m}$. Writing $O(h)$ as $g_{A,m}$ and consider 
+$$g_{A,m}\in \frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot\KK(\zeta_{m})[[h]]\cong\frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot\KK(\zeta_{m})[[q-\zeta_{m}]]$$
 under the identification $q=\zeta_{m}\exp(h)$ where $\delta,\varepsilon_{m}(\xi)$ are transcendental. 
 \begin{remark}
     It is unclear if $\delta$ is a function of $\xi$. 
@@ -13,19 +23,19 @@ under the identification $q=\zeta_{m}\exp(h)$ where $\delta,\varepsilon_{m}(\xi)
     These $g_{A,m}$ have huge coefficients -- slightly worse than factorial where the degree $p-2$ coefficients have $p$ in the denominator. 
 \end{remark}
 One then hopes that to each $g_{A,m}$ and a class $\xi\in K_{3}(\KK)$ one can associate a power series 
-$$g_{m}(\xi)\in\frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot\KK_{p}(\zeta_{m})[[q-\zeta_{m}]]$$
-with $\KK_{p}$ the $p$-adic completion of $\KK$ such that the ratio $g_{A,m}/g_{m}(\xi)$ has $p$-integral coefficients. 
+$$g_{m}(\xi)\in\frac{\sqrt{\delta}}{\sqrt[m]{\varepsilon_{m}(\xi)}}\cdot\KK_{p}^{\wedge}(\zeta_{m})[[q-\zeta_{m}]]$$
+with $\KK_{p}^{\wedge}$ the $p$-adic completion of $\KK$ such that the ratio $g_{A,m}/g_{m}(\xi)$ has $p$-integral coefficients. 
 
 While it is yet uncear how to realize this on the nose, the product 
 \begin{equation}\label{eqn: symmetrization}
-    h_{A,m}(q)=g_{A,m}(q)g_{A,m}(q^{-1})\in\Ocal_{\KK}\left[\frac{1}{\Delta}\right][[1-\zeta_{m}]]
+    h_{A,m}(q)=g_{A,m}(q)g_{A,m}(q^{-1})\in\Ocal_{\KK}\left[\zeta_{m},\frac{1}{\Delta}\right][[q-\zeta_{m}]]
 \end{equation}
 cancels out the preceding transcendental terms and where $\Delta$ is the discriminant of the number field $\KK$. 
 
 The $p$-adic properties can be studied in an appropriate generalization of the Habiro ring, but the case of the (ungeneralized) Habiro ring as in \Cref{def: Habiro ring} is already interesting. 
 \begin{proposition}\label{prop: isomorphism of Habiro ring}
     Let $\Hcal$ be the Habiro ring. There is an isomorphism 
-    $$\Hcal\cong\left\{(h_{m})_{m\geq 1}:\substack{h_{m}\in\ZZ[\zeta_{m}][[q-\zeta_{m}]] \text{ such that for all primes }p\\ h_{m}=h_{pm}\in\ZZ_{p}[\zeta_{pm}][[q-\zeta_{pm}]]\cong\ZZ_{p}[\zeta_{pm}][[q-\zeta_{m}]]}\right\}.$$
+    $$\Hcal\cong\left\{(h_{m})_{m\geq 1}:\substack{h_{m}\in\ZZ[\zeta_{m}][[q-\zeta_{m}]] \text{ such that for all primes }p\\ h_{m}=h_{pm}\in\ZZ_{p}[\zeta_{m}][[q-\zeta_{m}]]\cong\ZZ_{p}[\zeta_{pm}][[q-\zeta_{pm}]]}\right\}.$$
 \end{proposition}
 
 \begin{figure}[H]
@@ -93,6 +103,9 @@ $\spec(\ZZ[q])$
 
 \caption{$p$-adic behavior of Habiro ring elements.}
 \end{figure}
+\begin{corollary}\label{corr: injection to power series in q minus 1}
+    There is an injection $\Hcal\hookrightarrow\ZZ[[q-1]]$. 
+\end{corollary}
 \begin{corollary}\label{corr: injection to product of adjointing roots of unity}
     The map $\Hcal\to\prod_{m\geq 1}\ZZ[\zeta_{m}]$ by $h\mapsto (h(\zeta_{m}))_{m}$ is injective. 
 \end{corollary}
@@ -101,7 +114,7 @@ $\spec(\ZZ[q])$
 \end{corollary}
 This behavior suggests that the Habiro ring is much more structured than a ring of functions that admits asymptotic expansions at all roots of unity, and is in this sense quite rigid. This is observed, for example, in the $p$-adic ``coherence'' behavior of the series appearing in the description of \Cref{prop: isomorphism of Habiro ring}.
 
-Unfortunately, this na\"{i}ve definition of the Habiro ring cannot be nicely generalized. Garoufalidis and Zagier observed that for $h_{A,m}\in\Ocal_{\KK}[\zeta_{m},\frac{1}{\Delta}][[q-\zeta_{m}]]$, it is not the case that $h_{A,m}$ agrees with $h_{A,pm}$ as elements of $\Ocal_{\KK_{p}}[\zeta_{m},\frac{1}{\Delta}][[q-\zeta_{m}]]$, though it does agree up a sign depending on the residue class of the prime $p$ modulo 3. This allows us to give the eponymous definition. 
+Unfortunately, this na\"{i}ve definition of the Habiro ring cannot be nicely generalized. Garoufalidis and Zagier observed that for $h_{A,m}\in\Ocal_{\KK}\left[\zeta_{m},\frac{1}{\Delta}\right][[q-\zeta_{m}]]$, it is not the case that $h_{A,m}$ agrees with $h_{A,pm}$ as elements of $\Ocal_{\KK_{p}^{\wedge}}\left[\zeta_{m},\frac{1}{\Delta}\right][[q-\zeta_{m}]]$, though it does agree up a sign depending on the residue class of the prime $p$ modulo 3 in a special case, suggesting that compatibility could indeed be defined. This allows us to give the eponymous definition. 
 \begin{definition}[Habiro Ring of a Number Field]\label{def: Habiro ring of a number field}
     Let $\KK$ be a number field with discriminant $\Delta$. The Habiro ring of $\KK$ is given by 
     $$\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]}=\left\{(h_{m})_{m\geq1}:\substack{h_{m}\in\Ocal_{\KK}[\zeta_{m},\frac{1}{\Delta}][[q-\zeta_{m}]] \\
@@ -115,7 +128,7 @@ While this definition is the appropriate generealization of the Habiro ring, it 
 \begin{remark}
     In special cases, such as $\KK/\QQ$ being an Abelian extension, an ad-hoc construction for a map can be made. 
 \end{remark}
-This behavior is analogous to the nice behavior of the ``symmetrization'' of (\ref{eqn: symmetrization}), and we thus expect that for each $\xi\in K_{3}(\KK)$ there is a unique (up to unique isomorphism) locally free rank 1 module or line bundle $L(\xi)$ over $\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]}$ (resp. $\spec(\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]}))$ which naturally contains $(g_{A,m})_{m}$, the power series of asymptotic expansions at roots of unity, as an element (resp. section). In fact, if two matrices $A_{1},A_{2}$ define the same number field $\KK$ in the procedure of (\ref{eqn: number field of Nahm equation}), then the ratios of the asymptotic expansions at roots of unity
+This behavior is analogous to the nice behavior of the ``symmetrization'' of (\ref{eqn: symmetrization}), and we thus expect that for each $\xi\in K_{3}(\KK)$ there is a unique (up to unique isomorphism) locally free rank 1 module or line bundle $L(\xi)$ over $\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]}$ (resp. $\spec(\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]}))$ which naturally contains $(g_{A,m})_{m}$, the power series of asymptotic expansions at roots of unity, as an element (resp. section). In fact, if two matrices $A_{1},A_{2}$ define the same number field $\KK$ and $\xi\in K_{3}(\KK)$ as in the procedure of (\ref{eqn: number field of Nahm equation}), then the ratios of the asymptotic expansions at roots of unity
 $$\left(\frac{g_{A_{1},m}}{g_{A_{2},m}}\right)\in\mathrm{Frac}\left(\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]}\right)$$
 which produces a natural map $K_{3}(\KK)\to\sfPic(\Hcal_{\Ocal_{\KK}[\frac{1}{\Delta}]})$ to the Picard groupoid of line bundles/invertible modules over the Habiro ring of the number field. 
 
