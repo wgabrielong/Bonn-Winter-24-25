@@ -89,12 +89,12 @@ The $q$-difference equation this satisfies can be easily deduced.
     \end{align*}
     as desired. 
 \end{proof}
-We can modify the Nahm sum to rid ourselves of the $q^{a/2}$ factor in (\ref{eqn: q-difference equation of 1x1 Nahm sum}).\marginpar{The exposition that follows is drawn from the erratum discussed at the begining of lecture 5. The discussion below is likely extremely error-prone and the reader is encouraged to consult \cite{NahmAsymptotics} for full details.}
+We can modify the Nahm sum to rid ourselves of the $q^{a/2}$ factor in (\ref{eqn: q-difference equation of 1x1 Nahm sum}).\marginpar{The exposition that follows is drawn from the erratum discussed at the begining of lecture 5. The reader is encouraged to consult \cite{NahmAsymptotics} for full details.}
 \begin{corollary}\label{corr: q-difference equation of modified 1x1 Nahm sum}
     Let 
     $$f_{a}^{\mathrm{mod}}(t,q)=f_{a}(q^{-a/2}t,q)=\sum_{n\geq0}(-1)^{an}\frac{q^{\frac{1}{2}an^{2}-\frac{1}{2}an}}{(q;q)_{n}}t^{n}$$
     Then the modified Nahm sum satisfies the $t$-deformed $q$-difference equation 
-    \begin{equation}\label{eqn: q-difference equation}
+    \begin{equation}\label{eqn: q-difference equation of modified 1x1 Nahm sum}
         f_{a}^{\mathrm{mod}}(t,q) - f_{a}^{\mathrm{mod}}(qt,q) = (-1)^{a}t\cdot f_{a}^{\mathrm{mod}}(q^{a}t,q).
     \end{equation}
 \end{corollary}
@@ -111,7 +111,7 @@ We use the ansatz
     f_{a}(t,q)=\exp\left(\frac{V(t)}{h}\right)g_{a}(t,q)
 \end{equation}
 \begin{equation}\label{eqn: qt 1x1 Nahm sum ansatz}
-    f_{a}(t,q)=\exp\left(\frac{V(qt)}{h}\right)g_{a}(qt,q)
+    f_{a}(qt,q)=\exp\left(\frac{V(qt)}{h}\right)g_{a}(qt,q)
 \end{equation}
 in what follows, with $V(t)\in\QQ[[t]]$ satisfying $V(0)=0$. \Cref{eqn: 1x1 Nahm sum ansatz,eqn: qt 1x1 Nahm sum ansatz} takes are related by the formula we now describe. 
 \begin{proposition}\label{prop: V functional equation for 1x1 Nahm ansatz}
@@ -134,18 +134,22 @@ Using this, we can compute the ratio of the leading factors of \Cref{eqn: 1x1 Na
 \end{proposition}
 \begin{corollary}\label{corr: exponent ratio for 1x1 Nahm sum antsatz}
     Let $V(t)$ be as in the Nahm equation ansatz. The ratios of the exponential factors satisfy 
-    $$\exp\left(\frac{V(qt)}{h}\right)/\exp\left(\frac{V(t)}{h}\right)\sim\exp((\partial^{\log}V)(t))(1+O(h)).$$ 
+    $$\exp\left(\frac{V(qt)}{h}\right)/\exp\left(\frac{V(t)}{h}\right)\sim\exp((\partial^{\log}V)(t))(1+O(h))$$
+    for $q=e^{h}$.  
 \end{corollary}
 \begin{proof}
-    We have 
+    We have by \Cref{prop: V functional equation for 1x1 Nahm ansatz}
     \begin{align*}
         \exp\left(\frac{V(qt)}{h}\right) &= \exp\left(\frac{V(t)}{h}+(\partial^{\log}V)(t)+\frac{h}{2}((\partial^{\log})^{2}V)(t)\right)\\
         &=\exp\left(\frac{V(t)}{h}\right)\exp\left((\partial^{\log}V)(t)\right)\exp\left(\frac{h}{2}((\partial^{\log})^{2}V)(t)\right)
     \end{align*}
-    where the first term of the product above cancels in the ratio and the final term of the product expands to a power series in $h$. 
+    where the first term of the product above cancels in the ratio and the final term of the product expands to a power series in $h$ with constant coefficient 1. 
 \end{proof}
-Of special interest to us will be the final terms of the product above, where we denote $Z(t)=\exp((\partial^{\log}V)(t))$ and $\widetilde{Z}(t,q)=\exp\left((\partial^{\log}V)(t)\right)\exp\left(\frac{h}{2}((\partial^{\log})^{2}V)(t)\right)$.
-This allows us to produce a functional equation of the $g_{a}$ appearing in \Cref{eqn: 1x1 Nahm sum ansatz,eqn: qt 1x1 Nahm sum ansatz} which we will soon revisit. Note specializing at $q-1$ produces 
+Denoting $Z(t)=\exp((\partial^{\log}V)(t))$ and $\widetilde{Z}(t,q)=\exp\left((\partial^{\log}V)(t)\right)\exp\left(\frac{h}{2}((\partial^{\log})^{2}V)(t)\right)$, we divide (\ref{eqn: q-difference equation of modified 1x1 Nahm sum}) by the exponential prefactor $\exp\left(\frac{V(t)}{h}\right)$ and the ansatz \Cref{eqn: 1x1 Nahm sum ansatz,eqn: qt 1x1 Nahm sum ansatz} to observe 
+$$g_{a}(t,q)-\widetilde{Z}(t,q)g_{a}(qt,q)=(-1)^{a}\cdot t\cdot\prod_{i=0}^{a-1}\widetilde{Z}(q^{i}t,q)\cdot g_{a}(q^{a},t)$$
+which we seek to show lies in $\QQ[[t,q-1]]$.
+
+Specializing at $q=1$ (ie. $h=0$) produces 
 \begin{equation}\label{eqn: specialized Z functional equation}
     1-Z(t)=(-1)^{a}t\cdot Z(t)^{a}
 \end{equation}
