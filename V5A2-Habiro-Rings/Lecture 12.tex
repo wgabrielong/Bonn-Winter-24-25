@@ -1,8 +1,10 @@
 \section{Lecture 12 -- 31st January 2025}\label{sec: lecture 12}
 Recall from \Cref{thm: Nahm sum asymptotics at roots of unity} and the discussion of the first part of \Cref{sec: lecture 11} that we have 
-$$f_{a}(t,q)\sim\exp\left(-\frac{V(t)}{m^{2}\varepsilon}g_{a,m}(t,q)\right)$$
-as $q\to\zeta_{m}$ and $q=\zeta_{m}\exp(-\varepsilon)$ and $g_{a,m}(t,q)\in\QQ(\zeta_{m})[t][[\varepsilon]]$. Setting 
-$$R_{m}=R[\zeta_{m},t^{1/m}], S_{m}=R_{m}\left[\frac{1}{2},\sqrt{\delta}\right]$$
+$$f_{a}(t,q)\sim\exp\left(-\frac{V(t)}{m^{2}\varepsilon}\right)g_{a,m}(t,q)$$
+a convergent series on the open unit disc. We can consider asymptotics as $q\to\zeta_{m}$ setting $q=\zeta_{m}\exp(-\varepsilon)$ and $g_{a,m}(t,q)\in\QQ(\zeta_{m})[t][[\varepsilon]]$. We consider the \'{e}tale $\ZZ[t]$-algebra 
+$$R=\ZZ\left[t,z,\frac{1}{\delta}\right]/(1-z=(-1)^{a}tz^{a})$$
+with $\delta=z+a(1-z)$ and set 
+$$R_{m}=R[\zeta_{m},t^{1/m}]\text{ and }S_{m}=R_{m}\left[\frac{1}{2},\sqrt{\delta}\right]$$
 we can show the following theorem. 
 \begin{theorem}\label{thm: power series of Nahm expansion at roots of unity}
     Let $f_{a}(t,q)$ be a Nahm sum with power series term $g_{a,m}(t,q)$ as $q\to\zeta_{m}$. Then 
@@ -15,13 +17,13 @@ Geometrically, we want to consider restricting scalars from $(S_{m}\otimes\QQ)[[
 
 Fix a prime $p>3$ and consider the embedding $\QQ\to\QQ_{p}$, where we have $\widehat{R}=R_{p}^{\wedge},\widehat{S}=S_{p}^{\wedge}$ are the $p$-adic completions of $R,S$, respectively. We obtain $\widehat{R_{m}}=\widehat{R}\widehat{\otimes}_{\ZZ_{p}\langle t\rangle}\ZZ_{p}\langle\zeta_{p^{m}},t^{1/p^{m}}\rangle,\widehat{S_{m}}=\widehat{S}\widehat{\otimes}_{\ZZ_{p}\langle t\rangle}\ZZ_{p}\langle\zeta_{p^{m}},t^{1/m}\rangle$ analogously. Passing to the limit, we have 
 $$\widehat{R_{\infty}}=\lim_{m}\widehat{R_{m}}$$
-which is an integral perfectoid ring over $R_{\infty}^{0}=\ZZ_{p}\langle\zeta_{p^{\infty}},t^{1/p^{\infty}}\rangle$. In this setting, we can consider the tilt $R_{\infty}^{0,\flat}=\lim_{x\mapsto x^{p}}(\ZZ_{p}\langle\zeta_{p},t^{1/m}\rangle/p), \widehat{R_{\infty}}^{\flat}=\lim_{x\mapsto x^{p}}(\widehat{R_{\infty}}/p)$. 
+which is an integral perfectoid ring over $R_{\infty}^{0}=\ZZ_{p}\langle\zeta_{p^{\infty}},t^{1/p^{\infty}}\rangle$. In this setting, we can consider the tilt $R_{\infty}^{0,\flat}=\lim_{x\mapsto x^{p}}(\ZZ_{p}\langle\zeta_{p},t^{1/p^{m}}\rangle/p), \widehat{R_{\infty}}^{\flat}=\lim_{x\mapsto x^{p}}(\widehat{R_{\infty}}/p)$. 
 \begin{example}
     Consider $\ZZ_{p}\langle\zeta_{1/p^{\infty}}\rangle$. The tilt $\ZZ\langle\zeta_{p^{\infty}}\rangle^{\flat}$ contains the element $(\overline{1},\overline{\zeta_{p}},\overline{\zeta_{p^{2}}},\dots)=\varepsilon$ and we can produce an isomorphism $\ZZ\langle\zeta_{p^{\infty}}\rangle^{\flat}\cong\FF_{p}[[(\varepsilon-1)^{1/p^{\infty}}]]$.
 \end{example}
 Per the previous example, there is a map $\ZZ_{p}\langle \zeta_{p^{\infty}}\rangle^{\flat}\mapsto R_{\infty}^{0,\flat}$ taking the element $\varepsilon$ to $(t,t^{1/p},t^{1/p^{2}},\dots)$ which we denote $t^{\flat}$. 
 
-In $p$-adic Hodge theory, we also have the $A_{\inf}(-)$ construction taking a ring to the ring of its $p$-typical Witt vectors. We have $A_{\inf}(\ZZ_{p}\langle\zeta_{p^{\infty}}\rangle)\cong\ZZ_{p}\langle q^{1/p^{\infty}}\rangle^{\wedge}_{(q-1)}, A_{\inf}(R^{0}_{\infty})\cong\ZZ_{p}\langle q^{1/p^{\infty}}[t^{\flat}]^{1/p^{\infty}}\rangle^{\wedge}_{(q-1)}$. These rings are still defined by the Nahm equation, replacing $t$ by the Teichm\"{u}ller lift $[t^{\flat}]$ of $t$. This gives the pushout diagram 
+In $p$-adic Hodge theory, we also have the $A_{\inf}(-)$ construction taking a ring to the ring of its $p$-typical Witt vectors. We have $A_{\inf}(\ZZ_{p}\langle\zeta_{p^{\infty}}\rangle)\cong\ZZ_{p}\langle q^{1/p^{\infty}}\rangle^{\wedge}_{(q-1)}, A_{\inf}(R^{0}_{\infty})\cong\ZZ_{p}\langle q^{1/p^{\infty}},[t^{\flat}]^{1/p^{\infty}}\rangle^{\wedge}_{(q-1)}$. These rings are still defined by the Nahm equation, replacing $t$ by the Teichm\"{u}ller lift $[t^{\flat}]$ of $t$. This gives the pushout diagram 
 $$% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXFpaX3twfVxcbGFuZ2xlIHEsXFx3aWRldGlsZGV7dH1cXHJhbmdsZV57XFx3ZWRnZX1feyhxLTEpfSJdLFswLDEsIlxcWlpfe3B9XFxsYW5nbGUgcSxcXHdpZGV0aWxkZXt0fSx6XFxyYW5nbGUvKDEtej0oLTEpXnthfVxcd2lkZXRpbGRle3R9el57YX0pIl0sWzIsMCwiQV97XFxpbmZ9KFJeezB9X3tcXGluZnR5fSkiXSxbMiwxLCJBX3tcXGluZn1cXGxlZnQoXFx3aWRlaGF0e1Jfe1xcaW5mdHl9fVxccmlnaHQpIl0sWzEsM10sWzAsMl0sWzIsM10sWzAsMV1d
 \begin{tikzcd}
 	{\ZZ_{p}\langle q,\widetilde{t}\rangle^{\wedge}_{(q-1)}} && {A_{\inf}(R^{0}_{\infty})} \\
