@@ -8,7 +8,7 @@ We consider some additional properties of elliptic functions.
 \end{proposition}
 \begin{proof}
     Without loss of generality, we can take these zeroes and poles to lie in the interior of the period parallelogram. Consider the function $g(z)=z\cdot\frac{f'(z)}{f(z)}$ which has simple poles at both the poles and zeroes of $f$ with residues $m_{i}a_{i}$ and $-m_{i}a_{i}$, respectively. In particular, the sum of (\ref{eqn: residue sum of zeroes and poles of elliptic function}) is given by $\frac{1}{2\pi i}\int_{\partial P_{\Omega}}g(z)dz$. Decomposing this as an integral over segments as in \Cref{prop: residue sum is zero}, we have 
-    $$\int_{\partial P_{\Omega}}g(z)dz = \int_{[0,\omega_{1}]}g(z)dz + \int_{[\omega_{1},\omega_{1}+\omega_{2}]}g(z)dz + \int_{[\omega_{1}+\omega_{2},\omega_{2}]}+\int_{[\omega_{2},0]}g(z)dz.$$
+    $$\int_{\partial P_{\Omega}}g(z)dz = \int_{[0,\omega_{1}]}g(z)dz + \int_{[\omega_{1},\omega_{1}+\omega_{2}]}g(z)dz + \int_{[\omega_{1}+\omega_{2},\omega_{2}]}g(z)dz+\int_{[\omega_{2},0]}g(z)dz.$$
     Considering the integral over the oriented segments $[0,\omega_{1}]$ and $[\omega_{1}+\omega_{2},\omega_{2}]$ we can write this integral 
     \begin{align*}
         \int_{[0,\omega_{1}]}g(z)dz + \int_{[\omega_{1}+\omega_{2},\omega_{2}]}g(z)dz &= \int_{[0,\omega_{1}]}g(z)dz - \int_{[\omega_{2},\omega_{1}+\omega_{2}]}g(z)dz \\ 
@@ -68,7 +68,7 @@ The Weierstrass $\wp$-function is extremely important to the study of elliptic f
 \end{proof}
 Using the above lemma, we can in fact show that it suffices to use a rational function in $\wp(z)$ multiplied by $\wp'(z)$. 
 \begin{proposition}\label{prop: elliptic functions in terms of Weierstrass}
-    Let $\Omega$ be a lattice and $f(z)$ elliptic with respect to $\Omega$. Then $f(z)$ can be written the product of $\wp'(z)$ and a rational function in $\wp(z)$. \marginpar{Proposition 3.2} 
+    Let $\Omega$ be a lattice and $f(z)$ elliptic with respect to $\Omega$. Then $f(z)$ can be written as the product of $\wp'(z)$ and a rational function in $\wp(z)$. \marginpar{Proposition 3.2} 
 \end{proposition}
 \begin{proof}
     Note that if $f(z)$ is an elliptic function of odd order, then $f(z)/\wp(z)$ is an elliptic function of even order. So to prove the claim, it suffices to treat the case of $f(z)$ an elliptic function of even order. 

@@ -15,7 +15,7 @@ Following our previous dicussion, we seek to express $\wp'(z)^{2}$ the elliptic 
         \wp(z)^{3} &= \frac{1}{z^{6}} +3c_{2}\frac{1}{z^{2}} + 3c_{4}+\dots
     \end{align*}
     where we compute 
-    $$\wp'(z)-4p(z)^{3}=-20c_{2}\frac{1}{z^{2}}-28c_{4}+\dots$$
+    $$\wp'(z)-4\wp(z)^{3}=-20c_{2}\frac{1}{z^{2}}-28c_{4}+\dots$$
     and iterating the process once more to use $\wp(z)$ write the pole of order 2 that 
     $$\wp'(z)^{2}-4\wp(z)^{3}+20c_{2}\wp(z)=28c_{4}+\dots$$
     where we now note that the function on the right is a holomorphic elliptic function and hence $28c_{4}$ itself. Rearranging, we yield $\wp'(z)^{2}=4\wp(z)^{3}-20c_{2}\wp(z)-28c_{4}$. To find $c_{2},c_{4}$ in terms of the lattice, we write $h(z)=\wp(z)-\frac{1}{z^{2}}=\sum_{\omega\in\Omega\setminus\{0\}}\left(\frac{1}{(z-\omega^{2})}-\frac{1}{\omega^{2}}\right)$ so taking the derivative we get $h^{(m)}(z)=(-1)^{m}(m-1)!\sum_{\omega\in\Omega\setminus\{0\}}\frac{1}{(z-\omega)^{m+2}}$. Now noting that $(2m)!c_{2m}=h^{(2m)}(0)$ we conclude that $c_{2m}=(2m+1)\sum_{\omega\in\Omega\setminus\{0\}}\frac{1}{\omega^{2m+2}}$ giving the claim. 
@@ -41,9 +41,9 @@ The field of elliptic functions with respect to a lattice $\Omega$ can be explic
 \end{proof}
 In particular, this algebraically realizes the field of elliptic functions as a degree 2 extension of the field of rational functions on $\CC$. 
 
-By \Cref{prop: residue sum is zero}, we know that elliptic functions satisfy strong restraints on their zeroes and poles. However, given a set of zeroes and poles alognside their multiplicities, it is unclear if the inverse problem can be solved -- constructing an elliptic function with those zeroes and poles. This, however, turns out to be possible, and will necessitate the development of the theory of elliptic modular functions. 
+By \Cref{prop: residue sum is zero}, we know that elliptic functions satisfy strong constraints on their zeroes and poles. However, given a set of zeroes and poles alongside their multiplicities, it is unclear if the inverse problem can be solved -- constructing an elliptic function with those zeroes and poles. This, however, turns out to be possible, and will necessitate the development of the theory of elliptic modular functions. 
 
-We begin with the following lemma, which produecs an example of such a function. 
+We begin with the following lemma, which produces an example of such a function. 
 \begin{lemma}\label{lem: Weierstrass zeta function}
     Let $\Omega$ be a lattice. The function 
     $$f(z)=\frac{1}{z}+\sum_{\omega\in\Omega\setminus\{0\}}\left(\frac{1}{z-\omega}+\frac{1}{\omega}+\frac{z}{\omega^{2}}\right)$$
